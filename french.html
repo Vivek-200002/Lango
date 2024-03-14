@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>French</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 280vh;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    top: 170px;
+    position: absolute;
+  }
+  
+  table {
+    margin-bottom: 100px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    border-spacing: 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  th {
+    background-color: #1ba31f;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  tr:hover {
+    background-color: #ffc400;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  tr {
+    opacity: 0;
+    animation: fadeInRow 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRow {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  td::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  td:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+  button{
+    width: 13%;
+    height: 5%;
+    position: absolute;
+    right: 10%;
+    top: 120px;
+    font-size: 18px;
+        cursor: pointer;
+        background-color: #fff;
+        color: #007bff;
+        border: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    button:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+    h1{
+      color: aliceblue;
+      position: absolute;
+      top: 50px;
+      font-weight: bolder;
+      font-size: 50px;
+    }
+
+</style>
+</head>
+<body>
+  <h1>MIND YOUR French</h1>
+<button onclick="switchToMainPage()">Practice</button>
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Basic French</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>English</td>
+        <td>French</td>
+      </tr>
+      <tr>
+        <td>the restaurant</td>
+        <td>le restaurant		</td>
+      </tr>
+      <tr>
+        
+        <td>the brother	</td>
+        <td>le frère</td>
+      </tr>
+      <tr>
+        
+        <td>the street
+        </td>
+        <td>la rue	</td>
+      </tr>
+      <tr>
+        <td>the sister</td>
+        <td>la soeur		</td>
+      </tr>
+      <tr>
+        <td>I
+        </td>
+        <td>je		</td>
+      </tr>
+      <tr>
+        <td>you
+        </td>
+        <td>tu	</td>
+      </tr>
+<tr>
+  <td>you
+</td>
+  <td>vous	</td>
+</tr>
+<tr>
+  <td>	he
+</td>
+  <td>il (masculine)	</td>
+</tr>
+<tr>
+    <td>she
+	</td>
+    <td>elle (feminine)	</td>
+  </tr>
+  <tr>
+    <td>we
+	</td>
+    <td>nous	</td>
+  </tr>
+  <tr>
+    <td>	they
+    </td>
+    <td>ils (masculine)	</td>
+  </tr>
+  <tr>
+    <td>	Thank you
+    </td>
+    <td>Merci	</td>
+  </tr>
+    </tbody>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Advance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>English</td>
+        <td>		French</td>
+      </tr>
+      <tr>
+        <td>What did you do before that?
+        </td>
+        <td>Que faisiez-vous avant cela?		</td>
+      </tr>
+      <tr>
+        <td>I wasn't thinking about it.</td>
+        <td>Je n'y pensais pas.	</td>
+      </tr>
+      <tr>
+        <td>We would often go to the movies.
+        </td>
+        <td>Nous allions souvent au cinéma.	</td>
+      </tr>
+      <tr>
+        <td>The stores used to close at 9.</td>
+        <td>Les magasins fermaient à 9 heures.	</td>
+      </tr>
+      <tr>
+        <td>When we saw him, he was shopping.
+        </td>
+        <td>Quand nous l'avons vu, il faisait des courses.	</td>
+      </tr>
+      <tr>
+        <td>I was telephoning when he came in.</td>
+        <td>Je téléphonais quand il est entré.	</td>
+      </tr>
+<tr>
+  <td>Suppose I phone him.
+</td>
+  <td>Si je lui téléphonais?	</td>
+</tr>
+<tr>
+  <td> Suppose we go to lunch.
+</td>
+  <td>Si nous allions déjeuner?		</td>
+</tr>
+<tr>
+  <td>If I were you...</td>
+  <td>Si j'étais à votre place...	</td>
+</tr>
+<tr>
+  <td>Life is beautiful.</td>
+  <td>La vie est belle.	</td>
+</tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+<script>
+  // You can add JavaScript here for further interactions or animations if needed
+  function switchToMainPage() {
+        window.location.href = "practcef.html";
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 250vh;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    top: 170px;
+    position: absolute;
+  }
+  
+  table {
+    margin-bottom: 100px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    border-spacing: 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  th {
+    background-color: #1ba31f;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  tr:hover {
+    background-color: #ffc400;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  tr {
+    opacity: 0;
+    animation: fadeInRow 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRow {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  td::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  td:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+  button{
+    width: 13%;
+    height: 5%;
+    position: absolute;
+    right: 10%;
+    top: 120px;
+    font-size: 18px;
+        cursor: pointer;
+        background-color: #fff;
+        color: #007bff;
+        border: none;
+        border-radius: 10px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    button:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+    h1{
+      color: aliceblue;
+      position: absolute;
+      top: 50px;
+      font-weight: bolder;
+      font-size: 50px;
+    }
+
+</style>
+</head>
+<body>
+  <h1>MIND YOUR SPANISH</h1>
+<button onclick="switchToMainPage()">Practice</button>
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Common Phrases</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>   Spanish</td>
+        <td>English		</td>
+      </tr>
+      <tr>
+        <td>Hola</td>
+        <td>Hello	</td>
+      </tr>
+      <tr>
+        <td>Buenas noches</td>
+        <td>Good evening
+        </td>
+      </tr>
+      <tr>
+        <td>Buenas noches	</td>
+        <td>Good night	</td>
+      </tr>
+      <tr>
+        <td>Que te vaya bien	</td>
+        <td>	Have a good day</td>
+      </tr>
+      <tr>
+        <td>¿Qué te gusta hacer?	</td>
+        <td>What do you like to do?	</td>
+      </tr>
+      <tr>
+        <td>Me gusta / No me gusta…	</td>
+        <td>I like / I don't like…	</td>
+      </tr>
+<tr>
+  <td>Me encanta…	</td>
+  <td>I love…	</td>
+</tr>
+<tr>
+  <td>	No me interesa</td>
+  <td>	I am not interested.</td>
+</tr>
+    </tbody>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2"> Normal Phrases</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Spanish</td>
+        <td>		 English</td>
+      </tr>
+      <tr>
+        <td>¡Feliz cumpleaños!	</td>
+        <td>Happy birthday!</td>
+      </tr>
+      <tr>
+        <td>Buena suerte!</td>
+        <td>Good luck!	</td>
+      </tr>
+      <tr>
+        <td>¡Bien hecho!	</td>
+        <td>Well done!	</td>
+      </tr>
+      <tr>
+        <td>¡Cuídate!	</td>
+        <td>Take care</td>
+      </tr>
+      <tr>
+        <td>¡Felicitaciones!	</td>
+        <td>Congratulations</td>
+      </tr>
+      <tr>
+        <td>¡Salud!	</td>
+        <td> Cheers!</td>
+      </tr>
+<tr>
+  <td>¿Puede ayudarme?</td>
+  <td>Can you help me?	</td>
+</tr>
+<tr>
+  <td>No entiendo</td>
+  <td> I don't understand!	</td>
+</tr>
+<tr>
+  <td>No (lo) sé	</td>
+  <td> I don't know!</td>
+</tr>
+<tr>
+  <td>No hablo español	</td>
+  <td>I don't speak Spanish	</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+<script>
+     function switchToMainPage() {
+        window.location.href = "pracrices.html";
+    }
+
+</script>
+
+</body>
+</html>

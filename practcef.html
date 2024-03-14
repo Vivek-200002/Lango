@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background:url(ryan-wallace-azA1hLbjBBo-unsplash.jpg);
+        background-size: cover;
+        margin: 150px;
+        padding: 0;
+        
+    }
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #A3492F;
+        border-radius: 10px;
+        box-shadow: 0 0 100px rgb(0, 0, 0);
+    }
+    #question {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .option {
+        display: block;
+        margin: 10px auto;
+        padding: 15px 30px;
+        cursor: pointer;
+        background-color: #f0f0f0;
+        border: 1px solid #cccccc93;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        width: 80%;
+        text-align: center;
+        font-size: 18px;
+    }
+    .option:hover {
+        background-color: #533F4D;
+    }
+    #result {
+        margin-top: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div id="question">Bonjour, comment ça va ?</div>
+    <div class="option" onclick="checkAnswer(this)">A. Hello, how are you?</div>
+    <div class="option" onclick="checkAnswer(this)">B. My name is Marie</div>
+    <div class="option" onclick="checkAnswer(this)">C. Thank you very much.</div>
+    <div class="option" onclick="checkAnswer(this)">D. Excuse me, where is the train station?</div>
+    <p id="result"></p>
+</div>
+
+<script>
+    var questions = [
+        {
+            question: "Bonjour, comment ça va ?",
+            correctAnswer: "A. Hello, how are you?"
+        },
+        {
+            question: "Je m'appelle Marie.",
+            correctAnswer: "B. My name is Marie"
+        },
+        {
+            question: "Merci beaucoup.",
+            correctAnswer: "C. Thank you very much."
+        },
+        {
+            question: "Excusez-moi, où est la gare ?",
+            correctAnswer: "D. Excuse me, where is the train station?"
+        }
+    ];
+
+    var currentQuestionIndex = 0;
+
+    function displayQuestion() {
+        var currentQuestion = questions[currentQuestionIndex];
+        document.getElementById("question").textContent = currentQuestion.question;
+    }
+
+    function checkAnswer(option) {
+        var selectedAnswer = option.textContent;
+        var correctAnswer = questions[currentQuestionIndex].correctAnswer;
+        var resultElement = document.getElementById("result");
+        
+        if (selectedAnswer === correctAnswer) {
+            resultElement.textContent = "Correct! Moving to the next question...";
+            setTimeout(function() {
+                resultElement.textContent = "";
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    displayQuestion();
+                } else {
+                    resultElement.textContent = "Quiz completed!";
+                }
+            }, 1500);
+        } else {
+            resultElement.textContent = "Incorrect! Please try again.";
+        }
+    }
+
+    displayQuestion();
+</script>
+
+</body>
+</html>

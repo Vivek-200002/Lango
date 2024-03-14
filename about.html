@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About </title>
+    <style>
+        
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100wh;
+    background-color: rgb(255, 255, 255);
+    
+}
+#page1{
+    top: 31%;
+    position: relative;
+    
+    height: 30vh;
+    width: 100vw;
+  display: flex;
+  background-color: #011425;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 35px rgb(0, 0, 0);
+    gap: 70px;
+}
+.elem{
+  position: relative;
+    height: 70%;
+    width: 20%;
+    overflow: hidden;
+    box-shadow: 0 4px 55px rgb(0, 0, 0);
+}
+
+.elem h2{
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #49391f;
+    color: #fff;
+  position: absolute;
+    z-index: 10;
+   
+}
+
+#page1 h1{
+    font-size: 100px;
+    position: absolute;
+    top: -58%;
+    color: #111010;
+    
+    -webkit-text-stroke: 2px #fff;
+}
+
+.elem img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 9;
+    box-shadow: 0 4px 35px rgb(0, 0, 0);
+}
+
+.elem:hover h2{
+    color: #fff;
+    background-color: transparent;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  
+}
+nav {
+    
+    
+    width: 100vw;
+    height: 4vh;
+    z-index: 2;
+    position: fixed;
+    background-color: #011425;
+    padding: 10px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.445);
+}
+nav ul {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+
+    margin: 0 20px;
+
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #f0f0f0;
+}
+nav h1 {
+    position: absolute;
+left: 11px ;
+
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main #footer{
+    height: 35vh;
+    width: 85.5%;
+   
+    top: 35%;
+  display: flex;
+    background-color: #011425;
+   
+    gap: 120px;
+    padding: 0 100px;
+    box-shadow: 0 4px 35px rgb(0, 0, 0);
+    
+}
+
+section {
+    position: relative;
+    left: 3.8%;
+   
+    top: 40%;
+    width: 100vw;
+    height: 100vw;
+    
+   
+}
+
+.service-item {
+  display: inline-block;
+  margin: 0 20px;
+  width: 90vw;
+  background-color: #011425;
+  border-radius: 10px;
+
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
+  overflow: hidden;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  background-color: #ffc107;
+}
+
+.service-item img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+    margin-top: 30px;
+  width: 300px;
+  box-shadow: 0px 0px 50px rgb(0, 0, 0);
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.service-item h3 {
+    position: relative;
+    left: 34%;
+    
+  margin-top: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.service-item p {
+  padding: 0 20px 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <nav id="nav">
+            <h1>LANGO</h1>
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="page1">
+  <h1>What We Do</h1>
+    <div class="elem">
+        <h2>We teach language</h2>
+        <img src="ab.avif" alt="">
+    </div>
+    <div class="elem">
+        <h2>Home tution</h2>
+        <img src="ab1.avif" alt="">
+    </div>
+    <div class="elem">
+        <h2>Hire Tutor</h2>
+        <img src="ab3.avif" alt="">
+    </div>
+    
+</div>
+<section class="service">
+     
+        <div class="service-item">
+          <img src="t1.avif" alt="Online Courses">
+          <h3>We have 50 branches all over india</h3>
+        
+        </div>
+        <div class="service-item">
+          <img src="t2.avif" alt="Online Courses">
+          <h3>Till 2024 we have teach almost 10 lakh  people</h3>
+        
+        </div>
+        <div class="service-item">
+          <img src="t3.avif" alt="Online Courses">
+          <h3>we have 120 virtual classes</h3>
+        </div>
+
+        <div class="service-item">
+          <img src="t4.avif" alt="Online Courses">
+          <h3>We stand in top 50 online teaching</h3>
+        </div>
+        <div class="service-item">
+          <img src="t5.avif" alt="Online Courses">
+          <h3>We have more than 15 yr expirence</h3>
+        </div>
+      </section>
+</div>    
+</body>
+</html>

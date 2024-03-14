@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Started </title>
+<style>
+    body {
+        position: relative;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: linear-gradient(to bottom right, #5ebdff, #1982f2);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    video{
+        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+       z-index: -1;
+    }
+    .container {
+        text-align: center;
+    }
+    .button {
+        padding: 15px 30px;
+        margin-top: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #fff;
+        color: #007bff;
+        border: none;
+        border-radius: 25px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .button:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+</style>
+</head>
+<body>
+<video src="production_id_5200029 (2160p).mp4" autoplay muted loop></video>
+<div class="container">
+    <h1 style="color: #fff; font-size: 60px; margin: 2px;">Welcome to Lango</h1>
+    <p style="color: #ffffff; font-size: 30px; margin: 2px;">Click the button below to enter in learnig era!</p>
+    <button  class="button" onclick="switchToMainPage()">Get Started</button>
+</div>
+
+<script>
+    function switchToMainPage() {
+        window.location.href = "main.html";
+    }
+</script>
+
+</body>
+</html>
