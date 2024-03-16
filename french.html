@@ -1,540 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>French</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   height: 280vh;
-  }
-  
-  .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    top: 170px;
-    position: absolute;
-  }
-  
-  table {
-    margin-bottom: 100px;
-    width: 100%;
-    border-collapse: collapse;
-    border-radius: 5px;
-    overflow: hidden;
-    border-spacing: 0;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease-out forwards;
-  }
-  
-  th, td {
-    padding: 20px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    transition: all 0.3s ease;
-    position: relative;
-  }
-  
-  th {
-    background-color: #1ba31f;
-    color: white;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  tr:hover {
-    background-color: #ffc400;
-  }
-  
-  tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-  }
-  
-  tr {
-    opacity: 0;
-    animation: fadeInRow 1s forwards;
-  }
-  
-  @keyframes fadeIn {
-    from {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn French in 15 days</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1B4543;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    #header {
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      animation: fadeIn 1s ease-out forwards;
       opacity: 0;
-      transform: translateY(-50px);
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  @keyframes slideIn {
-    from {
-      transform: translateY(-100%);
-    }
-    to {
-      transform: translateY(0);
-    }
-  }
 
-  @keyframes fadeInRow {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 
-  td::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.4);
-    z-index: -1;
-    transition: all 0.3s ease;
-    opacity: 0;
-    transform: scale(0);
-  }
-
-  td:hover::before {
-    opacity: 1;
-    transform: scale(1);
-  }
-  button{
-    width: 13%;
-    height: 5%;
-    position: absolute;
-    right: 10%;
-    top: 120px;
-    font-size: 18px;
-        cursor: pointer;
-        background-color: #fff;
-        color: #007bff;
-        border: none;
-        border-radius: 10px;
-        transition: background-color 0.3s ease, color 0.3s ease;
+    h1 {
+      font-size: 48px;
+      margin: 0;
+      color: #F0944F;
     }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #011425;
+      box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+      margin: 20px 0;
+    }
+
+    .day {
+      font-size: 30px;
+      margin-bottom: 10px;
+      color: #FFFFFF;
+      font-weight: 900;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      margin-bottom: 25px;
+    }
+
+    .player {
+      width: 640px;
+      height: 360px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 24px rgb(0, 0, 0);
+    }
+
+    .controls {
+      display: flex;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #1F4959;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgb(0, 0, 0);
+      transition: background-color 0.3s;
+    }
+
+    .practice-btn {
+      margin-top: 20px;
+      text-decoration: none;
+      padding: 15px 90px;
+      background-color: #FF4A35;
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .practice-btn:hover {
+      background-color: #E3751F;
+      transform: translateY(-2px);
+    }
+
     button:hover {
-        background-color: #007bff;
-        color: #fff;
+      background-color: #E3964B;
     }
-    h1{
-      color: aliceblue;
-      position: absolute;
-      top: 50px;
-      font-weight: bolder;
-      font-size: 50px;
-    }
-
-</style>
+  </style>
 </head>
 <body>
-  <h1>MIND YOUR French</h1>
-<button onclick="switchToMainPage()">Practice</button>
-<div class="container">
-  <table>
-    <thead>
-      <tr>
-        <th colspan="2">Basic French</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>English</td>
-        <td>French</td>
-      </tr>
-      <tr>
-        <td>the restaurant</td>
-        <td>le restaurant		</td>
-      </tr>
-      <tr>
-        
-        <td>the brother	</td>
-        <td>le frère</td>
-      </tr>
-      <tr>
-        
-        <td>the street
-        </td>
-        <td>la rue	</td>
-      </tr>
-      <tr>
-        <td>the sister</td>
-        <td>la soeur		</td>
-      </tr>
-      <tr>
-        <td>I
-        </td>
-        <td>je		</td>
-      </tr>
-      <tr>
-        <td>you
-        </td>
-        <td>tu	</td>
-      </tr>
-<tr>
-  <td>you
-</td>
-  <td>vous	</td>
-</tr>
-<tr>
-  <td>	he
-</td>
-  <td>il (masculine)	</td>
-</tr>
-<tr>
-    <td>she
-	</td>
-    <td>elle (feminine)	</td>
-  </tr>
-  <tr>
-    <td>we
-	</td>
-    <td>nous	</td>
-  </tr>
-  <tr>
-    <td>	they
-    </td>
-    <td>ils (masculine)	</td>
-  </tr>
-  <tr>
-    <td>	Thank you
-    </td>
-    <td>Merci	</td>
-  </tr>
-    </tbody>
-  </table>
-  <table>
-    <thead>
-      <tr>
-        <th colspan="2">Advance</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>English</td>
-        <td>		French</td>
-      </tr>
-      <tr>
-        <td>What did you do before that?
-        </td>
-        <td>Que faisiez-vous avant cela?		</td>
-      </tr>
-      <tr>
-        <td>I wasn't thinking about it.</td>
-        <td>Je n'y pensais pas.	</td>
-      </tr>
-      <tr>
-        <td>We would often go to the movies.
-        </td>
-        <td>Nous allions souvent au cinéma.	</td>
-      </tr>
-      <tr>
-        <td>The stores used to close at 9.</td>
-        <td>Les magasins fermaient à 9 heures.	</td>
-      </tr>
-      <tr>
-        <td>When we saw him, he was shopping.
-        </td>
-        <td>Quand nous l'avons vu, il faisait des courses.	</td>
-      </tr>
-      <tr>
-        <td>I was telephoning when he came in.</td>
-        <td>Je téléphonais quand il est entré.	</td>
-      </tr>
-<tr>
-  <td>Suppose I phone him.
-</td>
-  <td>Si je lui téléphonais?	</td>
-</tr>
-<tr>
-  <td> Suppose we go to lunch.
-</td>
-  <td>Si nous allions déjeuner?		</td>
-</tr>
-<tr>
-  <td>If I were you...</td>
-  <td>Si j'étais à votre place...	</td>
-</tr>
-<tr>
-  <td>Life is beautiful.</td>
-  <td>La vie est belle.	</td>
-</tr>
 
-<tr>
-  <td> Hello, how are you?
-  </td>
-  <td>	Bonjour, comment ça va ?	</td>
-</tr>
-<tr>
-  <td> My name is Marie.
-  </td>
-  <td> Je m'appelle Marie.		</td>
-</tr>
-<tr>
-  <td> What time is it?
-  </td>
-  <td>	Quelle heure est-il ?	</td>
-</tr>
-<tr>
-  <td>  I am twenty years old.
-  </td>
-  <td>	J'ai vingt ans.	</td>
-</tr>
-<tr>
-  <td> Where is the library?
-  </td>
-  <td>	Où est la bibliothèque ?	</td>
-</tr>
-<tr>
-  <td> What's your name?
-  </td>
-  <td>	Comment tu t'appelles ?	</td>
-</tr>
-<tr>
-  <td> Have a good day!
-  </td>
-  <td>	Bonne journée !	</td>
-</tr>
-<tr>
-  <td> I am from France.
-  </td>
-  <td>	Je viens de France.	</td>
-</tr>
-<tr>
-  <td>How much does it cost?
-  </td>
-  <td>	Combien ça coûte ?	</td>
-</tr>
-<tr>
-  <td>Goodbye, see you soon.
-  </td>
-  <td>	Au revoir, à bientôt.	</td>
-</tr>
-<tr>
-  <td>How was your day?
-  </td>
-  <td>	Comment s'est passé ta journée ?	</td>
-</tr>
-<tr>
-  <td>Can I help you?
-  </td>
-  <td>	Puis-je vous aider ?	</td>
-</tr>
-<tr>
-  <td>What is your favorite dish?
-  </td>
-  <td>Quel est ton plat préféré ?		</td>
-</tr>
-<tr>
-  <td> Thank you for your help.
-  </td>
-  <td>	Merci pour votre aide.	</td>
-</tr>
-<tr>
-  <td> How many siblings do you have?
-  </td>
-  <td>	Combien de frères et sœurs as-tu ?	</td>
-</tr>
-<tr>
-  <td>I have to go now.
-  </td>
-  <td>	Je dois y aller maintenant.	</td>
-</tr>
-<tr>
-  <td>Where is the train station?
-  </td>
-  <td>	Où se trouve la gare ?	</td>
-</tr>
-<tr>
-  <td>Do you like music?
-  </td>
-  <td>	Est-ce que tu aimes la musique ?	</td>
-</tr>
-<tr>
-  <td>What day is today?
-  </td>
-  <td>	Quel jour sommes-nous ?	</td>
-</tr>
-<tr>
-  <td>My birthday is in July.
-  </td>
-  <td>	Mon anniversaire est en juillet.	</td>
-</tr>
-<tr>
-  <td>What is your favorite color?
-  </td>
-  <td>	Quelle est ta couleur préférée ?	</td>
-</tr>
-<tr>
-  <td> Are you coming to the party?
-  </td>
-  <td>	Tu viens à la fête ?	</td>
-</tr>
-<tr>
-  <td>I don't understand French.
-  </td>
-  <td>	Je ne comprends pas le français.	</td>
-</tr>
-<tr>
-  <td> I am tired.
-  </td>
-  <td>	Je suis fatigué(e).	</td>
-</tr>
-<tr>
-  <td>Do you want to go out with me?
-  </td>
-  <td>	Veux-tu sortir avec moi ?	</td>
-</tr>
-<tr>
-  <td> What is your favorite sport?
-  </td>
-  <td>	Quel est ton sport préféré ?	</td>
-</tr>
-<tr>
-  <td>How do I get to the beach?
-  </td>
-  <td>	Comment puis-je aller à la plage ?	</td>
-</tr>
-<tr>
-  <td>I am hungry.
-  </td>
-  <td>	J'ai faim.	</td>
-</tr>
-<tr>
-  <td> What time is the movie?
-  </td>
-  <td>	À quelle heure est le film ?	</td>
-</tr>
-<tr>
-  <td>What movie do you want to watch?
-  </td>
-  <td>	Quel film veux-tu regarder ?	</td>
-</tr>
-<tr>
-  <td>Do you have any pets?
-  </td>
-  <td>As-tu des animaux de compagnie ?		</td>
-</tr>
-<tr>
-  <td>Where do you live?
-  </td>
-  <td>	Où habites-tu ?	</td>
-</tr>
-<tr>
-  <td>I love to travel.
-  </td>
-  <td>	J'adore voyager.	</td>
-</tr>
-<tr>
-  <td>What is your favorite book?
-  </td>
-  <td>	Quel est ton livre préféré ?	</td>
-</tr>
-<tr>
-  <td>How do you say "hello" in French?
-  </td>
-  <td>	Comment dit-on "hello" en français ?	</td>
-</tr>
-<tr>
-  <td>What do you want to do today?
-  </td>
-  <td>	Que veux-tu faire aujourd'hui ?	</td>
-</tr>
-<tr>
-  <td>How old are you?
-  </td>
-  <td>	Quel âge as-tu ?	</td>
-</tr>
-<tr>
-  <td> What is your favorite song?
-  </td>
-  <td>Quelle est ta chanson préférée ?		</td>
-</tr>
-<tr>
-  <td>Do you want to dance with me?
-  </td>
-  <td>Veux-tu danser avec moi ?		</td>
-</tr>
-<tr>
-  <td> Do you have any brothers or sisters?
-  </td>
-  <td>	As-tu des frères ou des sœurs ?	</td>
-</tr>
-<tr>
-  <td>Where is the supermarket?
-  </td>
-  <td>	Où se trouve le supermarché ?	</td>
-</tr>
-<tr>
-  <td>I am studying French.
-  </td>
-  <td>	J'étudie le français.	</td>
-</tr>
-<tr>
-  <td>How many languages do you speak?
-  </td>
-  <td>Combien de langues parles-tu ?		</td>
-</tr>
-<tr>
-  <td>What time do you finish work?
-  </td>
-  <td>	À quelle heure finis-tu le travail ?	</td>
-</tr>
-<tr>
-  <td>What do you like to do in your free time?
-  </td>
-  <td>	Qu'aimes-tu faire pendant ton temps libre ?	</td>
-</tr>
-<tr>
-  <td>What is your favorite movie?
-  </td>
-  <td>	Quel est ton film préféré ?	</td>
-</tr>
-<tr>
-  <td>I am cold.
-  </td>
-  <td>	J'ai froid.	</td>
-</tr>
-<tr>
-  <td> How long have you been here?
-  </td>
-  <td>Depuis combien de temps es-tu ici ?		</td>
-</tr>
-<tr>
-  <td>Do you want something to drink?
-    </td>
-  <td>Veux-tu quelque chose à boire ?		</td>
-</tr>
-<tr>
-  <td>Where is the swimming pool?
-  </td>
-  <td>	Où est la piscine ?	</td>
-</tr>
-
-    </tbody>
-  </table>
+<div id="header">
+  <h1>Learn French in 15 days</h1>
 </div>
 
+<!-- Loop to generate 15 containers -->
 <script>
-  // You can add JavaScript here for further interactions or animations if needed
-  function switchToMainPage() {
-        window.location.href = "practcef.html";
-    }
+  const videoIds = [
+    'cctA8tkRY3M', // Video ID for Day 1
+    'Cg7j6e4z05s', // Video ID for Day 2
+    '0uoh6ACUyVw',
+    '5EfnT0eVYk8',
+    'Vlk25QUC-2g',
+    'oZXQzub0yCQ',
+    '6cl17ybXhIQ',
+    'gUTJ2qkDIjQ',
+    'zrnj7d-omLY',
+    '_hDESUCX4tQ',
+    'uDZ2mYnbX2w',
+    'zB52OW-bBts',
+    'DGu-RKRBwXo',
+    'VjrtnKIGOws',
+    '8Ydit51Chpw'
+    
+    
+    // Video ID for Day 3
+    // Add more video IDs for each day
+  ];
 
+  for (let i = 0; i < 15; i++) {
+    document.write(`
+      <div class="container">
+        <div class="day">Day ${i + 1}</div>
+        <div class="player" id="player${i + 1}"></div>
+        <div class="controls">
+          <button onclick="playVideo(${i})">Play</button>
+          <button onclick="pauseVideo(${i})">Pause</button>
+        </div>
+      </div>
+    `);
+  }
 </script>
 
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+  const players = [];
+
+  function onYouTubeIframeAPIReady() {
+    for (let i = 0; i < 15; i++) {
+      players[i] = new YT.Player(`player${i + 1}`, {
+        height: '360',
+        width: '640',
+        videoId: videoIds[i], // Assign each player a different video ID
+        playerVars: {
+          'autoplay': 0,
+          'controls': 1,
+          'disablekb': 1,
+          'enablejsapi': 1,
+          'fs': 1,
+          'iv_load_policy': 3,
+          'modestbranding': 1,
+          'playsinline': 1,
+          'rel': 0,
+          'showinfo': 0
+        },
+        events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+        }
+      });
+    }
+  }
+
+  function onPlayerReady(event) {}
+
+  function onPlayerStateChange(event) {}
+
+  function playVideo(playerIndex) {
+    players[playerIndex].playVideo();
+  }
+
+  function pauseVideo(playerIndex) {
+    players[playerIndex].pauseVideo();
+  }
+</script>
+<a href="practcef.html" target="_blank" class="practice-btn">Statements</a>
 </body>
 </html>
