@@ -3,112 +3,537 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Practice</title>
+<title>French</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background:url(ryan-wallace-azA1hLbjBBo-unsplash.jpg);
-        background-size: cover;
-        margin: 150px;
-        padding: 0;
-        
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 280vh;
+  }
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    top: 170px;
+    position: absolute;
+  }
+  
+  table {
+    margin-bottom: 100px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    border-spacing: 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  th {
+    background-color: #1ba31f;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  tr:hover {
+    background-color: #ffc400;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  tr {
+    opacity: 0;
+    animation: fadeInRow 1s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
     }
-    .container {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #A3492F;
-        border-radius: 10px;
-        box-shadow: 0 0 100px rgb(0, 0, 0);
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-    #question {
-        font-size: 24px;
-        margin-bottom: 20px;
-        text-align: center;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
     }
-    .option {
-        display: block;
-        margin: 10px auto;
-        padding: 15px 30px;
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInRow {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  td::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  td:hover::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+  button{
+    width: 13%;
+    height: 5%;
+    position: absolute;
+    right: 10%;
+    top: 120px;
+    font-size: 18px;
         cursor: pointer;
-        background-color: #f0f0f0;
-        border: 1px solid #cccccc93;
+        background-color: #fff;
+        color: #007bff;
+        border: none;
         border-radius: 10px;
-        transition: background-color 0.3s ease;
-        width: 80%;
-        text-align: center;
-        font-size: 18px;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
-    .option:hover {
-        background-color: #533F4D;
+    button:hover {
+        background-color: #007bff;
+        color: #fff;
     }
-    #result {
-        margin-top: 20px;
-        font-weight: bold;
-        text-align: center;
+    h1{
+      color: aliceblue;
+      position: absolute;
+      top: 50px;
+      font-weight: bolder;
+      font-size: 50px;
     }
+
 </style>
 </head>
 <body>
-
+  <h1>MIND YOUR French</h1>
+<button onclick="switchToMainPage()">Practice</button>
 <div class="container">
-    <div id="question">Bonjour, comment ça va ?</div>
-    <div class="option" onclick="checkAnswer(this)">A. Hello, how are you?</div>
-    <div class="option" onclick="checkAnswer(this)">B. My name is Marie</div>
-    <div class="option" onclick="checkAnswer(this)">C. Thank you very much.</div>
-    <div class="option" onclick="checkAnswer(this)">D. Excuse me, where is the train station?</div>
-    <p id="result"></p>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Basic French</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>English</td>
+        <td>French</td>
+      </tr>
+      <tr>
+        <td>the restaurant</td>
+        <td>le restaurant		</td>
+      </tr>
+      <tr>
+        
+        <td>the brother	</td>
+        <td>le frère</td>
+      </tr>
+      <tr>
+        
+        <td>the street
+        </td>
+        <td>la rue	</td>
+      </tr>
+      <tr>
+        <td>the sister</td>
+        <td>la soeur		</td>
+      </tr>
+      <tr>
+        <td>I
+        </td>
+        <td>je		</td>
+      </tr>
+      <tr>
+        <td>you
+        </td>
+        <td>tu	</td>
+      </tr>
+<tr>
+  <td>you
+</td>
+  <td>vous	</td>
+</tr>
+<tr>
+  <td>	he
+</td>
+  <td>il (masculine)	</td>
+</tr>
+<tr>
+    <td>she
+	</td>
+    <td>elle (feminine)	</td>
+  </tr>
+  <tr>
+    <td>we
+	</td>
+    <td>nous	</td>
+  </tr>
+  <tr>
+    <td>	they
+    </td>
+    <td>ils (masculine)	</td>
+  </tr>
+  <tr>
+    <td>	Thank you
+    </td>
+    <td>Merci	</td>
+  </tr>
+    </tbody>
+  </table>
+  <table>
+    <thead>
+      <tr>
+        <th colspan="2">Advance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>English</td>
+        <td>		French</td>
+      </tr>
+      <tr>
+        <td>What did you do before that?
+        </td>
+        <td>Que faisiez-vous avant cela?		</td>
+      </tr>
+      <tr>
+        <td>I wasn't thinking about it.</td>
+        <td>Je n'y pensais pas.	</td>
+      </tr>
+      <tr>
+        <td>We would often go to the movies.
+        </td>
+        <td>Nous allions souvent au cinéma.	</td>
+      </tr>
+      <tr>
+        <td>The stores used to close at 9.</td>
+        <td>Les magasins fermaient à 9 heures.	</td>
+      </tr>
+      <tr>
+        <td>When we saw him, he was shopping.
+        </td>
+        <td>Quand nous l'avons vu, il faisait des courses.	</td>
+      </tr>
+      <tr>
+        <td>I was telephoning when he came in.</td>
+        <td>Je téléphonais quand il est entré.	</td>
+      </tr>
+<tr>
+  <td>Suppose I phone him.
+</td>
+  <td>Si je lui téléphonais?	</td>
+</tr>
+<tr>
+  <td> Suppose we go to lunch.
+</td>
+  <td>Si nous allions déjeuner?		</td>
+</tr>
+<tr>
+  <td>If I were you...</td>
+  <td>Si j'étais à votre place...	</td>
+</tr>
+<tr>
+  <td>Life is beautiful.</td>
+  <td>La vie est belle.	</td>
+</tr>
+<tr>
+  <td> Hello, how are you?
+  </td>
+  <td>	Bonjour, comment ça va ?	</td>
+</tr>
+<tr>
+  <td> My name is Marie.
+  </td>
+  <td> Je m'appelle Marie.		</td>
+</tr>
+<tr>
+  <td> What time is it?
+  </td>
+  <td>	Quelle heure est-il ?	</td>
+</tr>
+<tr>
+  <td>  I am twenty years old.
+  </td>
+  <td>	J'ai vingt ans.	</td>
+</tr>
+<tr>
+  <td> Where is the library?
+  </td>
+  <td>	Où est la bibliothèque ?	</td>
+</tr>
+<tr>
+  <td> What's your name?
+  </td>
+  <td>	Comment tu t'appelles ?	</td>
+</tr>
+<tr>
+  <td> Have a good day!
+  </td>
+  <td>	Bonne journée !	</td>
+</tr>
+<tr>
+  <td> I am from France.
+  </td>
+  <td>	Je viens de France.	</td>
+</tr>
+<tr>
+  <td>How much does it cost?
+  </td>
+  <td>	Combien ça coûte ?	</td>
+</tr>
+<tr>
+  <td>Goodbye, see you soon.
+  </td>
+  <td>	Au revoir, à bientôt.	</td>
+</tr>
+<tr>
+  <td>How was your day?
+  </td>
+  <td>	Comment s'est passé ta journée ?	</td>
+</tr>
+<tr>
+  <td>Can I help you?
+  </td>
+  <td>	Puis-je vous aider ?	</td>
+</tr>
+<tr>
+  <td>What is your favorite dish?
+  </td>
+  <td>Quel est ton plat préféré ?		</td>
+</tr>
+<tr>
+  <td> Thank you for your help.
+  </td>
+  <td>	Merci pour votre aide.	</td>
+</tr>
+<tr>
+  <td> How many siblings do you have?
+  </td>
+  <td>	Combien de frères et sœurs as-tu ?	</td>
+</tr>
+<tr>
+  <td>I have to go now.
+  </td>
+  <td>	Je dois y aller maintenant.	</td>
+</tr>
+<tr>
+  <td>Where is the train station?
+  </td>
+  <td>	Où se trouve la gare ?	</td>
+</tr>
+<tr>
+  <td>Do you like music?
+  </td>
+  <td>	Est-ce que tu aimes la musique ?	</td>
+</tr>
+<tr>
+  <td>What day is today?
+  </td>
+  <td>	Quel jour sommes-nous ?	</td>
+</tr>
+<tr>
+  <td>My birthday is in July.
+  </td>
+  <td>	Mon anniversaire est en juillet.	</td>
+</tr>
+<tr>
+  <td>What is your favorite color?
+  </td>
+  <td>	Quelle est ta couleur préférée ?	</td>
+</tr>
+<tr>
+  <td> Are you coming to the party?
+  </td>
+  <td>	Tu viens à la fête ?	</td>
+</tr>
+<tr>
+  <td>I don't understand French.
+  </td>
+  <td>	Je ne comprends pas le français.	</td>
+</tr>
+<tr>
+  <td> I am tired.
+  </td>
+  <td>	Je suis fatigué(e).	</td>
+</tr>
+<tr>
+  <td>Do you want to go out with me?
+  </td>
+  <td>	Veux-tu sortir avec moi ?	</td>
+</tr>
+<tr>
+  <td> What is your favorite sport?
+  </td>
+  <td>	Quel est ton sport préféré ?	</td>
+</tr>
+<tr>
+  <td>How do I get to the beach?
+  </td>
+  <td>	Comment puis-je aller à la plage ?	</td>
+</tr>
+<tr>
+  <td>I am hungry.
+  </td>
+  <td>	J'ai faim.	</td>
+</tr>
+<tr>
+  <td> What time is the movie?
+  </td>
+  <td>	À quelle heure est le film ?	</td>
+</tr>
+<tr>
+  <td>What movie do you want to watch?
+  </td>
+  <td>	Quel film veux-tu regarder ?	</td>
+</tr>
+<tr>
+  <td>Do you have any pets?
+  </td>
+  <td>As-tu des animaux de compagnie ?		</td>
+</tr>
+<tr>
+  <td>Where do you live?
+  </td>
+  <td>	Où habites-tu ?	</td>
+</tr>
+<tr>
+  <td>I love to travel.
+  </td>
+  <td>	J'adore voyager.	</td>
+</tr>
+<tr>
+  <td>What is your favorite book?
+  </td>
+  <td>	Quel est ton livre préféré ?	</td>
+</tr>
+<tr>
+  <td>How do you say "hello" in French?
+  </td>
+  <td>	Comment dit-on "hello" en français ?	</td>
+</tr>
+<tr>
+  <td>What do you want to do today?
+  </td>
+  <td>	Que veux-tu faire aujourd'hui ?	</td>
+</tr>
+<tr>
+  <td>How old are you?
+  </td>
+  <td>	Quel âge as-tu ?	</td>
+</tr>
+<tr>
+  <td> What is your favorite song?
+  </td>
+  <td>Quelle est ta chanson préférée ?		</td>
+</tr>
+<tr>
+  <td>Do you want to dance with me?
+  </td>
+  <td>Veux-tu danser avec moi ?		</td>
+</tr>
+<tr>
+  <td> Do you have any brothers or sisters?
+  </td>
+  <td>	As-tu des frères ou des sœurs ?	</td>
+</tr>
+<tr>
+  <td>Where is the supermarket?
+  </td>
+  <td>	Où se trouve le supermarché ?	</td>
+</tr>
+<tr>
+  <td>I am studying French.
+  </td>
+  <td>	J'étudie le français.	</td>
+</tr>
+<tr>
+  <td>How many languages do you speak?
+  </td>
+  <td>Combien de langues parles-tu ?		</td>
+</tr>
+<tr>
+  <td>What time do you finish work?
+  </td>
+  <td>	À quelle heure finis-tu le travail ?	</td>
+</tr>
+<tr>
+  <td>What do you like to do in your free time?
+  </td>
+  <td>	Qu'aimes-tu faire pendant ton temps libre ?	</td>
+</tr>
+<tr>
+  <td>What is your favorite movie?
+  </td>
+  <td>	Quel est ton film préféré ?	</td>
+</tr>
+<tr>
+  <td>I am cold.
+  </td>
+  <td>	J'ai froid.	</td>
+</tr>
+<tr>
+  <td> How long have you been here?
+  </td>
+  <td>Depuis combien de temps es-tu ici ?		</td>
+</tr>
+<tr>
+  <td>Do you want something to drink?
+    </td>
+  <td>Veux-tu quelque chose à boire ?		</td>
+</tr>
+<tr>
+  <td>Where is the swimming pool?
+  </td>
+  <td>	Où est la piscine ?	</td>
+</tr>
+    </tbody>
+  </table>
 </div>
 
 <script>
-    var questions = [
-        {
-            question: "Bonjour, comment ça va ?",
-            correctAnswer: "A. Hello, how are you?"
-        },
-        {
-            question: "Je m'appelle Marie.",
-            correctAnswer: "B. My name is Marie"
-        },
-        {
-            question: "Merci beaucoup.",
-            correctAnswer: "C. Thank you very much."
-        },
-        {
-            question: "Excusez-moi, où est la gare ?",
-            correctAnswer: "D. Excuse me, where is the train station?"
-        }
-    ];
-
-    var currentQuestionIndex = 0;
-
-    function displayQuestion() {
-        var currentQuestion = questions[currentQuestionIndex];
-        document.getElementById("question").textContent = currentQuestion.question;
+  // You can add JavaScript here for further interactions or animations if needed
+  function switchToMainPage() {
+     
+        var quizUrl = "prafff.html"; // Change this to the URL of your quiz page
+        window.open(quizUrl, "_blank");
     }
 
-    function checkAnswer(option) {
-        var selectedAnswer = option.textContent;
-        var correctAnswer = questions[currentQuestionIndex].correctAnswer;
-        var resultElement = document.getElementById("result");
-        
-        if (selectedAnswer === correctAnswer) {
-            resultElement.textContent = "Correct! Moving to the next question...";
-            setTimeout(function() {
-                resultElement.textContent = "";
-                currentQuestionIndex++;
-                if (currentQuestionIndex < questions.length) {
-                    displayQuestion();
-                } else {
-                    resultElement.textContent = "Quiz completed!";
-                }
-            }, 1500);
-        } else {
-            resultElement.textContent = "Incorrect! Please try again.";
-        }
-    }
-
-    displayQuestion();
 </script>
 
 </body>
