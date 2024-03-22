@@ -58,7 +58,8 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100vh;
     width: 100vw;
     position: relative;
-  
+    height: 96vh; /* Remove fixed height for responsiveness */
+    min-height: 90vh; /* Set minimum height to viewport height */
     background-color: #2E151B;
 }
 #inbox{
@@ -127,7 +128,7 @@ color: #fff;
     height:50%;
    
     display:flex;
-    top: 20%;
+    top:15%;
  
     align-items: center;
     justify-content:center;
@@ -142,7 +143,6 @@ color: #fff;
     background-position: center;
     transition: all ease 0.6s;
     box-shadow: 0 2px 50px rgb(0, 0, 0);
-
   }
 
   #card1{
@@ -160,20 +160,21 @@ color: #fff;
     background-color: #95C11E;
     padding-top: 100px;
     opacity: 0;
-    padding: 20px;
-
+    padding: 1px 19px;
+    
   }
   
 
   .overlay h4 {
-  
     text-transform: uppercase;
     color: black;
     font-weight: 800;
     white-space: nowrap;
     font-size: 40px;
-    
     margin-bottom: 0;
+    font-size: 3vw; /* Adjust the font size relative to the viewport width */
+    margin-bottom: 0vw; /* Adjust the margin relative to the viewport width */
+  
   }
 
   .overlay p{
@@ -181,6 +182,10 @@ color: #fff;
     color: black;
     font-size: 20px;
     margin-bottom: 40px;
+    font-size: 1.4vw; /* Adjust the font size relative to the viewport width */
+    margin-bottom: 2vw; /* Adjust the margin relative to the viewport width */
+    max-width: 90%; /* Limit the width of the paragraph to ensure full visibility */
+   
   }
 
   .card:hover .overlay{
@@ -203,15 +208,20 @@ justify-content: center;
 background-color: #E1DFE4;
 text-align: center;
 margin-top: 150px;
+margin-top: 10%; /* Adjust margin-top for responsive positioning */
+    padding: 20px; /* Add padding for better spacing */
 
   }
   
  #green-div h4{
     width:90%;
     color: #0e0d0d;
+margin-top: 0%;
     font-size: 20px;
+  text-align: center;
     text-transform: uppercase;
     text-decoration: solid;
+    font-size: 2vw;
 
  } 
 
@@ -304,16 +314,20 @@ transform: translateX(-50%);
   align-items: center;
   height: 100vh;
   margin: 0;
+  flex-direction: column; /*a*/
+  padding: 20px;/*a*/
 }
 #page6 h1{
   padding-left: 80px;
   font-weight: bolder;
   color: #00f7e2;
   box-shadow: 0 4px 70px rgb(0, 0, 0);
+  margin-top: 40px; /* Adjust margin for better spacing */
 }
 
 .list-container {
   display: grid;
+  margin-top: -70px;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
@@ -322,6 +336,8 @@ transform: translateX(-50%);
   background-color: #ffffff;
   overflow: hidden;
   animation: slide-in 1s ease-out;
+  grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Adjust grid columns for responsiveness */
+
 }
 
 .list-item {
@@ -449,10 +465,13 @@ height:200px;}
       position: relative;
     overflow: hidden;
       background-color: #D8AB21;
+      height: auto; /* Remove fixed height for responsiveness */
+      min-height: 100vh; /* Set minimum height to viewport height */
     }
 
     
 .container1 {
+ 
   max-width: 500px;
   margin: 60px auto;
   padding: 20px;
@@ -461,11 +480,17 @@ height:200px;}
   border-radius: 10px;
   box-shadow: 0 0 50px rgb(0, 0, 0);
   text-align: center;
+  max-width: 50%; /* Adjust max-width for smaller screens */
+  margin-top: 13%; /* Adjust margin-top for smaller screens */
+  box-shadow: 0 0 20px rgb(0, 0, 0); /* Reduce box-shadow for smaller screens */
 }
 
 h1 {
   color: #000000;
+  text-transform: uppercase;
 }
+
+ 
 
 .tip-container {
  
@@ -473,11 +498,14 @@ h1 {
   padding: 20px;
   background-color: #f0f0f0;
   border-radius: 5px;
+  margin: 5vw 0; /* Adjust margin for smaller screens */
+  box-shadow: 0 2px 20px rgb(0, 0, 0); /* Reduce box-shadow for smaller screens */
+  margin-top: 6vw; /* Adjust margin for smaller screens */
 }
 
 .btn {
   box-shadow: 0 5px 50px rgb(0, 0, 0);
-  margin-top: 170px;
+  margin-top: 35vh;
   padding: 10px 20px;
   background-color: #686a6b;
   color: #fff;
@@ -495,11 +523,14 @@ h1 {
 }
 
 #page7 h2{
-top: 8%;
+top: 0%;
 font-size: 28px;
 position: absolute;
 left: 50%;
+text-align: center;
+text-transform: uppercase;
 transform: translateX(-50%);
+font-size: 3vw; /* Adjust font-size for smaller screens */
 }
 
 @media (max-width:600px) {
@@ -565,11 +596,17 @@ left: 11px ;
   border-radius: 10px;
   box-shadow: 0 0 50px rgb(0, 0, 0);
   position: relative;
+  max-width: 60%; /* Adjust max-width for smaller screens */
+  box-shadow: 0 0 20px rgb(0, 0, 0); /* Reduce box-shadow for smaller screens */
 }
 .photo-container {
   display: flex;
   justify-content: space-around;
   margin-top: 20px;
+  
+  display: grid; /* Change to grid layout for better responsiveness */
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); /* Adjust grid layout for responsiveness */
+  gap: 20px; /* Add gap between grid items */
   
 }
 .photo {
@@ -583,6 +620,8 @@ left: 11px ;
  
   transition: transform 0.3s ease;
   margin-bottom: 20px;
+  box-shadow: 0 0 10px rgb(0, 0, 0); /* Reduce box-shadow for smaller screens */
+
 }
 .photo img {
   width: 100%;
@@ -621,9 +660,197 @@ font-size: 14px;
   position: relative;
 overflow: hidden;
   background-color: #De9036;
+  height: 0vh; /* Remove fixed height for responsiveness */
+  min-height: 140vh; /* Set minimum height to viewport height */
+
 }
 
 .container2 h1{
   text-align: center;
   font-weight: bolder;
 }
+
+/*additional*/
+
+#menu-btn {
+  display: none;
+  font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#menu-list li {
+  display: inline;
+  margin: 0 20px;
+}
+
+#menu-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+#menu-list li a:hover {
+  color: #f0f0f0;
+}
+
+@media (max-width: 600px) {
+  nav {
+    height: auto;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+
+  #menu-list {
+    display: none;
+    position: absolute;
+    top: calc(4vh + 20px);
+    left: 0;
+    width: 100%;
+    background-color: #011425;
+    padding: 10px 0;
+  }
+
+  #menu-list.show {
+    display: block;
+  }
+
+  #menu-list li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  #cards-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #cards-container {
+      top: 10%;
+  }
+
+  .card {
+      width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .overlay h4 {
+      font-size: 6vw; /* Adjust font size for smaller screens */
+  }
+
+  .overlay p {
+      font-size: 3vw; /* Adjust font size for smaller screens */
+      margin-bottom: 3vw; /* Adjust margin for smaller screens */
+  }
+
+  #green-div{
+    box-shadow: 0 2px 50px rgb(0, 0, 0);
+height: 15vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #E1DFE4;
+text-align: center;
+margin-top: 150px;
+margin-top: 51%; /* Adjust margin-top for responsive positioning */
+    padding: 20px; /* Add padding for better spacing */
+
+  }
+
+
+   #green-div h4{
+    width:90%;
+    color: #0e0d0d;
+margin-top: 2%;
+    font-size: 20px;
+  text-align: center;
+    text-transform: uppercase;
+    text-decoration: solid;
+    font-size: 3vw;
+
+ } 
+
+}
+
+
+@media screen and (max-width: 768px) {
+  #page6 {
+    padding: 6px; /* Adjust padding for smaller screens */
+  }
+
+  .list-container {
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns for smaller screens */
+  }
+
+ 
+
+  .btn {
+    box-shadow: 0 5px 50px rgb(0, 0, 0);
+    margin-top: 26vh;
+    padding: 10px 20px;
+    background-color: #686a6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    transition: background-color 0.3s;
+  }
+  #page7 h2{
+    top: 0%;
+  
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    font-size: 6vw; /* Adjust font-size for smaller screens */
+    }
+    
+    .container1 {
+ 
+      max-width: 500px;
+      margin: 60px auto;
+      padding: 20px;
+      margin-top: 150px;
+      background-color: #A2A99A;
+      border-radius: 10px;
+      box-shadow: 0 0 50px rgb(0, 0, 0);
+      text-align: center;
+      max-width: 50%; /* Adjust max-width for smaller screens */
+      margin-top: 43%; /* Adjust margin-top for smaller screens */
+      box-shadow: 0 0 20px rgb(0, 0, 0); /* Reduce box-shadow for smaller screens */
+    }
+   
+    #page8{
+      min-height: 340vh; 
+    }
+}
+

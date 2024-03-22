@@ -188,3 +188,10 @@ showTipBtn.addEventListener('click', displayRandomTip);
 
 // Display a random tip when the page loads
 displayRandomTip();
+
+
+
+document.getElementById('menu-btn').addEventListener('click', function() {
+    var menuList = document.getElementById('menu-list');
+    menuList.classList.toggle('show');
+  });
