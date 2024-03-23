@@ -656,7 +656,7 @@ overflow: hidden;
   }
    
   nav h1{
-    margin-top: 7.8vw;
+   display: none;
   }
   
 #hola{
@@ -753,11 +753,13 @@ margin-top: 2%;
 
 
 @media screen and (max-width: 768px) {
-  #page6 {
-    padding: 6px; /* Adjust padding for smaller screens */
+  #page6 h1{
+    margin-top: 6vw; /* Adjust padding for smaller screens */
+    margin-bottom: 2vw;
   }
 
   .list-container {
+    margin-top: 0vw;
     grid-template-columns: repeat(2, 1fr); /* Adjust grid columns for smaller screens */
   }
 
