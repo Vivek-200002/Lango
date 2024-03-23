@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Learn Marathi in 17 days</title>
   <style>
+
     body {
       font-family: Arial, sans-serif;
       background-color: #1B4543;
@@ -12,15 +13,15 @@
       padding: 0;
       color: #fff;
     }
-
+    
     #header {
-      padding: 20px;
+      padding: 5vw; /* Use vw for responsive padding */
       background-color: rgba(0, 0, 0, 0.7);
       text-align: center;
       animation: fadeIn 1s ease-out forwards;
       opacity: 0;
     }
-
+    
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -29,82 +30,118 @@
         opacity: 1;
       }
     }
-
+    
     h1 {
-      font-size: 48px;
+      font-size: 5vw; /* Use vw for responsive font size */
       margin: 0;
       color: #F0944F;
     }
-
+    
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 5vw; /* Use vw for responsive padding */
       border-radius: 10px;
       background-color: #011425;
-      box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
-      margin: 20px 0;
+      box-shadow: 0 0 5vw 2.5vw rgba(0, 0, 0, 0.5); /* Use vw for responsive box-shadow */
+      margin: 3vw 0; /* Use vw for responsive margin */
     }
-
+    
     .day {
-      font-size: 30px;
-      margin-bottom: 10px;
+      font-size: 3vw; /* Use vw for responsive font size */
+      margin-bottom: 2vw; /* Use vw for responsive margin */
       color: #FFFFFF;
       font-weight: 900;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      margin-bottom: 25px;
     }
-
+    
     .player {
-      width: 640px;
-      height: 360px;
-      margin-bottom: 20px;
-      border-radius: 10px;
+      max-width: 90vw; /* Use vw for responsive width */
+      height: 70vh; /* Adjust height automatically */
+      margin-bottom: 5vw; /* Use vw for responsive margin */
+      border-radius: 2vw; /* Use vw for responsive border radius */
       overflow: hidden;
-      box-shadow: 0 0 24px rgb(0, 0, 0);
+      box-shadow: 0 0 5vw rgb(0, 0, 0); /* Use vw for responsive box-shadow */
     }
-
+    
     .controls {
       display: flex;
-      gap: 20px;
+      
+      justify-content: center;
+      gap: 8vw; /* Use vw for responsive gap */
     }
-
-    button {
-      padding: 10px 20px;
-      background-color: #1F4959;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
+    
+    button, .practice-btn {
+      padding: 1vw 4vw; /* Use vw for responsive padding */
+      font-size: 2vw; /* Use vw for responsive font size */
+      border-radius: 1vw; /* Use vw for responsive border radius */
       cursor: pointer;
-      box-shadow: 0 0 20px rgb(0, 0, 0);
-      transition: background-color 0.3s;
-    }
-
-    .practice-btn {
-      margin-top: 20px;
-      text-decoration: none;
-      padding: 15px 90px;
-      background-color: #FF4A35;
-      color: #fff;
-      font-weight: 700;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 5vw rgb(0, 0, 0);
       transition: background-color 0.3s, transform 0.3s;
     }
-
+    
+    .practice-btn {
+      margin-top: 4vw; /* Use vw for responsive margin */
+      text-decoration: none;
+      background-color: red;
+      color: white;
+    }
+    
     .practice-btn:hover {
       background-color: #E3751F;
-      transform: translateY(-2px);
+      transform: translateY(-1vw); /* Use vw for responsive transform */
     }
-
+    
     button:hover {
       background-color: #E3964B;
     }
-  </style>
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #header {
+        padding: 10px;
+      }
+      
+      h1 {
+        font-size: 32px;
+      }
+      
+      .container {
+        padding: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        margin: 20px 0;
+      }
+      
+      .day {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      .player {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      
+      .controls {
+        flex-direction: row;
+        gap: 20px;
+      }
+      
+      button, .practice-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+    
+      body{
+        min-height: 1630vh;
+      }
+    }
+    
+    
+    </style>
 </head>
 <body>
 
