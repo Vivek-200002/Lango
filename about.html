@@ -159,6 +159,7 @@ section {
   overflow: hidden;
   margin-bottom: 10px;
   transition: transform 0.3s ease;
+
 }
 
 .service-item:hover {
@@ -176,31 +177,157 @@ section {
   height: 200px;
   border-radius: 20px;
   object-fit: cover;
+
+  
 }
 
 .service-item h3 {
     position: relative;
-    left: 34%;
+    left: 36%;
     
   margin-top: 20px;
   font-size: 24px;
   color: #ffffff;
+ 
 }
 
 .service-item p {
   padding: 0 20px 20px;
   color: #666;
   font-size: 16px;
+ 
+
 }
 
+
+#menu-btn {
+  display: none;
+  font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#menu-list li {
+  display: inline;
+  margin: 0 20px;
+}
+
+#menu-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+#menu-list li a:hover {
+  color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  nav {
+    min-height: 4vh;
+  }
+   
+  nav h1{
+   display: none;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+
+  #menu-list {
+    display: none;
+    position: absolute;
+    top: calc(4vh + 20px);
+    left: 0;
+    width: 100%;
+    background-color: #011425;
+    padding: 10px 0;
+  }
+
+  #menu-list.show {
+    display: block;
+  }
+
+  #menu-list li {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .elem {
+    width: 40%; /* Adjust width for smaller screens */
+  }
+
+  .elem h2 {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  #page1 h1 {
+    font-size: 60px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .elem {
+    width: 60%; /* Further adjust width for even smaller screens */
+  }
+
+  .elem h2 {
+    font-size: 12px; /* Further adjust font size for even smaller screens */
+  }
+
+  #page1 h1 {
+    font-size: 40px; /* Further adjust font size for even smaller screens */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .service-item {
+    width: calc(100% - 40px); /* Adjust width for smaller screens */
+  }
+  section {
+    position: relative;
+    left: 0%;
+  
+    top: 40%;
+    width: 100vw;
+    height: 630vw;
+    
+   
+}
+
+.service-item h3{
+  left: 5%;
+}
+.service-item p{
+  left: 5%;
+}
+
+
+
+}
 
     </style>
 </head>
 <body>
     <div class="main">
         <nav id="nav">
-            <h1>LANGO</h1>
-            <ul>
+          <button id="menu-btn">NavBar</button>
+          <h1>LANGO</h1>
+          <ul  id="menu-list">
+          
                 <li><a href="main.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="service.html">Services</a></li>
@@ -232,23 +359,31 @@ section {
         </div>
         <div class="service-item">
           <img src="t2.avif" alt="Online Courses">
-          <h3>Untill 2024, we have reached almost one people</h3>
+          <h3>Untill 2024, we have reached almost <br> one people</h3>
         
         </div>
         <div class="service-item">
           <img src="t3.avif" alt="Online Courses">
-          <h3>we have 120 virtual classes</h3>
+          <h3>we have 120 virtual <br> classes</h3>
         </div>
 
         <div class="service-item">
           <img src="t4.avif" alt="Online Courses">
-          <h3>We rank among the top 50 in online teaching </h3>
+          <h3>We rank among the top 50 <br> in online teaching </h3>
         </div>
         <div class="service-item">
           <img src="t5.avif" alt="Online Courses">
-          <h3>We have more than 15 years of expirence</h3>
+          <h3>We have more than <br> 15 years of expirence</h3>
         </div>
       </section>
-</div>    
+</div>
+
+<script>
+  
+document.getElementById('menu-btn').addEventListener('click', function() {
+    var menuList = document.getElementById('menu-list');
+    menuList.classList.toggle('show');
+  });
+</script>
 </body>
 </html>
